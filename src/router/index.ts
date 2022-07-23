@@ -1,42 +1,43 @@
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+// 测试
 
 const routes: Array<RouteRecordRaw> = [
-    {
-        path: '/',
-        name: 'Index',
-        meta: {
-            title: '首页',
-            keepAlive: true,
-            requireAuth: true
-        },
-        component: () => import('@/views/index.vue')
+  {
+    path: '/',
+    name: 'Index',
+    meta: {
+      title: '首页',
+      keepAlive: true,
+      requireAuth: true,
     },
-    {
-        path: '/login',
-        name: 'Login',
-        meta: {
-            title: '登录',
-            keepAlive: true,
-            requireAuth: false
-        },
-        component: () => import('@/views/login.vue')
+    component: () => import('@/views/index.vue'),
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    meta: {
+      title: '登录',
+      keepAlive: true,
+      requireAuth: false,
     },
-    {
-        path: '/mouse',
-        name: 'Mouse',
-        meta: {
-            title: '鼠标',
-            keepAlive: true,
-            requireAuth: false
-        },
-        component: () => import('@/views/vueUse.vue')
-    }
-]
+    component: () => import('@/views/login.vue'),
+  },
+  {
+    path: '/mouse',
+    name: 'Mouse',
+    meta: {
+      title: '鼠标',
+      keepAlive: true,
+      requireAuth: false,
+    },
+    component: () => import('@/views/vueUse.vue'),
+  },
+];
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes
-})
+  history: createWebHistory(),
+  routes,
+});
 
-export default router
+export default router;
