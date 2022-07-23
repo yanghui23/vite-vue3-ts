@@ -1,15 +1,16 @@
 <template>
   <div class="title">首页</div>
+  <el-button type="primary">Primary</el-button>
 </template>
 
 <script>
 export default {
-  name: "index"
-}
+  name: 'Index',
+};
 </script>
 
 <style lang="scss" scoped>
-  .title {
-    color: orange;
-  }
+.title {
+  color: orange;
+}
 </style>
